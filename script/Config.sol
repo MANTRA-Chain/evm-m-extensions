@@ -41,7 +41,7 @@ contract Config {
     uint256 public constant MANTRA_CHAIN_ID = 5888;
 
     // Testnet chain IDs
-    uint256 public constant LOCAL_CHAIN_ID = 31337;
+    uint256 public constant LOCAL_CHAIN_ID = 1337;
     uint256 public constant SEPOLIA_CHAIN_ID = 11155111;
     uint256 public constant ARBITRUM_SEPOLIA_CHAIN_ID = 421614;
     uint256 public constant OPTIMISM_SEPOLIA_CHAIN_ID = 11155420;
