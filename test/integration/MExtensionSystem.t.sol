@@ -310,12 +310,16 @@ contract MExtensionSystemIntegrationTests is BaseIntegrationTest {
         // against the state that has been swapped into, and accumulate a value
         // throughout the invocations which will be asserted against at the end
         // of the test once the fuzzed permutation is finished.
-        function(address /* from */, uint256[] memory /* yieldsAccumulator */, uint256 /* amountIn */)
-            internal
-            returns (uint256, uint256[] memory)[]
-            memory yieldAssertions = new function(address, uint256[] memory, uint256)
-                internal
-                returns (uint256, uint256[] memory)[](3);
+        function(
+            address /* from */,
+            uint256[] memory /* yieldsAccumulator */,
+            uint256 /* amountIn */
+        ) internal returns (uint256, uint256[] memory)[]
+            memory yieldAssertions = new function(
+                address,
+                uint256[] memory,
+                uint256
+            ) internal returns (uint256, uint256[] memory)[](3);
         yieldAssertions[M_YIELD_TO_ONE] = _testYieldCapture_mYieldToOne;
         yieldAssertions[M_YIELD_FEE] = _testYieldCapture_mYieldFee;
         yieldAssertions[M_EARNER_MANAGER] = _testYieldCapture_mEarnerManager;
